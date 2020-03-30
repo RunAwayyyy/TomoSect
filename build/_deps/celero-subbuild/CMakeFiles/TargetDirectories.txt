@@ -1,3 +1,0 @@
-/home/ner0/CLionProjects/TomoSect/build/_deps/celero-subbuild/CMakeFiles/rebuild_cache.dir
-/home/ner0/CLionProjects/TomoSect/build/_deps/celero-subbuild/CMakeFiles/celero-populate.dir
-/home/ner0/CLionProjects/TomoSect/build/_deps/celero-subbuild/CMakeFiles/edit_cache.dir

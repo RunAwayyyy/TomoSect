@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/benchmark_rect_intersection.dir/bench_rect_intersection.cpp.o  -o benchmark_rect_intersection  -Wl,-rpath,/home/ner0/CLionProjects/TomoSect/build/_deps/celero-build ../libtomosect.a ../_deps/celero-build/libcelero.so -lenoki-cuda -lpthread 

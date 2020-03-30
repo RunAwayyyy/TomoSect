@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/benchmark_aabb_intersection.dir/bench_aabb_intersection.cpp.o  -o benchmark_aabb_intersection  -Wl,-rpath,/home/ner0/CLionProjects/TomoSect/build/_deps/celero-build ../libtomosect.a ../_deps/celero-build/libcelero.so -lenoki-cuda -lpthread 

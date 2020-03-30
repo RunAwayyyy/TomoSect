@@ -1,3 +1,0 @@
-repository='https://github.com/mitsuba-renderer/enoki.git'
-module=''
-tag='origin'
