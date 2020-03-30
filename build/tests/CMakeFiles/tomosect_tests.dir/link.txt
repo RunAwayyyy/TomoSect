@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/tomosect_tests.dir/test_intersection.cpp.o CMakeFiles/tomosect_tests.dir/test_main.cpp.o CMakeFiles/tomosect_tests.dir/test_vector.cpp.o CMakeFiles/tomosect_tests.dir/test_point.cpp.o CMakeFiles/tomosect_tests.dir/test_geometry.cpp.o  -o tomosect_tests  ../libtomosect.a -lenoki-cuda 

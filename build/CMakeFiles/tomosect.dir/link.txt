@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtomosect.a  
+/usr/bin/ranlib libtomosect.a

@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/ner0/CLionProjects/TomoSect/build/_deps/celero-subbuild/CMakeFiles/celero-populate"
+		},
+		{
+			"file" : "/home/ner0/CLionProjects/TomoSect/build/_deps/celero-subbuild/CMakeFiles/celero-populate.rule"
+		},
+		{
+			"file" : "/home/ner0/CLionProjects/TomoSect/build/_deps/celero-subbuild/CMakeFiles/celero-populate-complete.rule"
+		},
+		{
+			"file" : "/home/ner0/CLionProjects/TomoSect/build/_deps/celero-subbuild/celero-populate-prefix/src/celero-populate-stamp/celero-populate-install.rule"
+		},
+		{
+			"file" : "/home/ner0/CLionProjects/TomoSect/build/_deps/celero-subbuild/celero-populate-prefix/src/celero-populate-stamp/celero-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/ner0/CLionProjects/TomoSect/build/_deps/celero-subbuild/celero-populate-prefix/src/celero-populate-stamp/celero-populate-download.rule"
+		},
+		{
+			"file" : "/home/ner0/CLionProjects/TomoSect/build/_deps/celero-subbuild/celero-populate-prefix/src/celero-populate-stamp/celero-populate-update.rule"
+		},
+		{
+			"file" : "/home/ner0/CLionProjects/TomoSect/build/_deps/celero-subbuild/celero-populate-prefix/src/celero-populate-stamp/celero-populate-patch.rule"
+		},
+		{
+			"file" : "/home/ner0/CLionProjects/TomoSect/build/_deps/celero-subbuild/celero-populate-prefix/src/celero-populate-stamp/celero-populate-configure.rule"
+		},
+		{
+			"file" : "/home/ner0/CLionProjects/TomoSect/build/_deps/celero-subbuild/celero-populate-prefix/src/celero-populate-stamp/celero-populate-build.rule"
+		},
+		{
+			"file" : "/home/ner0/CLionProjects/TomoSect/build/_deps/celero-subbuild/celero-populate-prefix/src/celero-populate-stamp/celero-populate-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"celero-populate"
+		],
+		"name" : "celero-populate"
+	}
+}
