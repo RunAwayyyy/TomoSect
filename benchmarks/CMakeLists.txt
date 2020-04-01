@@ -4,7 +4,7 @@ include(FetchContent)
 FetchContent_Declare(
     celero
     GIT_REPOSITORY https://github.com/DigitalInBlue/Celero.git
-    GIT_TAG        origin/master
+    GIT_TAG origin/master
 )
 
 FetchContent_GetProperties(celero)
@@ -12,6 +12,11 @@ if(NOT celero_POPULATED)
     FetchContent_Populate(celero)
     add_subdirectory(${celero_SOURCE_DIR} ${celero_BINARY_DIR})
 endif()
+
+# Setup output structure (I don't like all the nesting deep into subfolders)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin/benchmarks)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib/benchmarks)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib/benchmarks)
 
 add_executable(benchmark_rect_intersection bench_rect_intersection.cpp)
 target_link_libraries(benchmark_rect_intersection PUBLIC tomosect celero enoki-cuda)
