@@ -2,9 +2,24 @@ cmake_minimum_required(VERSION 3.16)
 
 include(FetchContent)
 FetchContent_Declare(
-    doctest
-    GIT_REPOSITORY https://github.com/onqtam/doctest.git
-    GIT_TAG origin/master
+    eigen3
+    GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
+    GIT_TAG 3.3.7
+)
+
+FetchContent_GetProperties(eigen3)
+if(NOT eigen3_POPULATED)
+    FetchContent_Populate(eigen3)
+
+    add_library(Eigen3 INTERFACE)
+    target_include_directories(Eigen3 INTERFACE ${eigen3_SOURCE_DIR})
+
+endif()
+
+FetchContent_Declare(
+        doctest
+        GIT_REPOSITORY https://github.com/onqtam/doctest.git
+        GIT_TAG origin/master
 )
 
 FetchContent_GetProperties(doctest)
@@ -25,6 +40,7 @@ add_executable(
     test_main.cpp
     test_point.cpp
     test_vector.cpp
+        test_custom_point.cpp
 )
-target_link_libraries(tomosect_tests PUBLIC tomosect enoki-cuda)
+target_link_libraries(tomosect_tests PUBLIC tomosect enoki-cuda Eigen3)
 target_include_directories(tomosect_tests PUBLIC $<BUILD_INTERFACE:${doctest_SOURCE_DIR}/doctest>)

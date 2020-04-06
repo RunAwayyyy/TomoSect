@@ -1,5 +1,5 @@
-# find the Sphinx executable inspired from https://devblogs.microsoft.com/cppblog/clear-functional-
-# c-documentation-with- sphinx-breathe-doxygen-cmake/
+# find the Sphinx executable inspired from https://devblogs.microsoft.com/cppblog/clear-functional- c-documentation-with- sphinx-breathe-
+# doxygen-cmake/
 
 find_program(
     SPHINX_EXECUTABLE
@@ -9,6 +9,4 @@ find_program(
 
 include(FindPackageHandleStandardArgs)
 
-find_package_handle_standard_args(
-    Sphinx "Sphinx executable (sphinx-build) not found" SPHINX_EXECUTABLE
-)
+find_package_handle_standard_args(Sphinx "Sphinx executable (sphinx-build) not found" SPHINX_EXECUTABLE)

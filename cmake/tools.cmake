@@ -1,6 +1,5 @@
 #
-# Heavily influenced by/Taken from https://github.com/StableCoder/cmake-script Thanks and credits to
-# it!
+# Heavily influenced by/Taken from https://github.com/StableCoder/cmake-script Thanks and credits to it!
 #
 
 option(CLANG_TIDY "Turns on clang-tidy processing if it is found." OFF)
@@ -20,8 +19,7 @@ macro(target_fix_clang_tidy target)
     endif()
 endmacro()
 
-# Adds include_what_you_use to the compilation, with the given arguments being used as the options
-# set.
+# Adds include_what_you_use to the compilation, with the given arguments being used as the options set.
 macro(include_what_you_use)
     if(IWYU AND IWYU_EXE)
         set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE "${IWYU_EXE};${IWYU_STRING}")

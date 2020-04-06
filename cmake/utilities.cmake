@@ -1,8 +1,7 @@
 include(FetchContent)
 
 #
-# This puts the FetchContent in the default build dirs and stuff For my cases this was always
-# sufficient
+# This puts the FetchContent in the default build dirs and stuff For my cases this was always sufficient
 #
 # Download steps are only provided for git. Uses the same variables as given in
 # https://cmake.org/cmake/help/v3.11/module/ExternalProject.html for the git documentation

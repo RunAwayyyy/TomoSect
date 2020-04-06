@@ -1,6 +1,5 @@
 #
-# Heavily influenced by/Taken from https://github.com/StableCoder/cmake-script Thanks and credits to
-# it!
+# Heavily influenced by/Taken from https://github.com/StableCoder/cmake-script Thanks and credits to it!
 #
 
 option(ENABLE_ALL_WARNINGS "Compile with all warnings for the major compilers" OFF)

@@ -89,15 +89,10 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
 
-add_library(
-    tomosect include/TomoSect/geometry.hpp include/TomoSect/intersection.hpp
-             include/TomoSect/point.hpp include/TomoSect/vector.hpp
-)
+add_library(tomosect include/TomoSect/geometry.hpp include/TomoSect/intersection.hpp include/TomoSect/point.hpp include/TomoSect/vector.hpp)
 target_include_directories(
-    tomosect
-    PUBLIC $<BUILD_INTERFACE:${enoki_SOURCE_DIR}/include>
-           $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/>
-           $<INSTALL_INTERFACE:include/> # <prefix>/include/mylib
+    tomosect PUBLIC $<BUILD_INTERFACE:${enoki_SOURCE_DIR}/include> $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/>
+                    $<INSTALL_INTERFACE:include/> # <prefix>/include/mylib
 )
 
 set_target_properties(tomosect PROPERTIES LINKER_LANGUAGE CXX)

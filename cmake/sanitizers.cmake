@@ -1,13 +1,10 @@
 #
-# Heavily influenced by/Taken from https://github.com/StableCoder/cmake-script Thanks and credits to
-# it!
+# Heavily influenced by/Taken from https://github.com/StableCoder/cmake-script Thanks and credits to it!
 #
 
 set(USE_SANITIZER
     ""
-    CACHE
-        STRING
-        "Compile with a sanitizer. Options are: Address, Memory, MemoryWithOrigins, Undefined, Thread, Leak, 'Address;Undefined'"
+    CACHE STRING "Compile with a sanitizer. Options are: Address, Memory, MemoryWithOrigins, Undefined, Thread, Leak, 'Address;Undefined'"
 )
 
 function(append value)
@@ -25,9 +22,7 @@ if(USE_SANITIZER)
     if(UNIX)
 
         set(USING_CLANG FALSE)
-        if(CMAKE_C_COMPILER_ID MATCHES "(Apple)?[Cc]lang" OR CMAKE_CXX_COMPILER_ID MATCHES
-                                                             "(Apple)?[Cc]lang"
-        )
+        if(CMAKE_C_COMPILER_ID MATCHES "(Apple)?[Cc]lang" OR CMAKE_CXX_COMPILER_ID MATCHES "(Apple)?[Cc]lang")
             set(USING_CLANG TRUE)
         endif()
         set(USING_GNU FALSE)
@@ -40,9 +35,7 @@ if(USE_SANITIZER)
         endif()
 
         # Address and UB sanitizer
-        if(USE_SANITIZER MATCHES "([Aa]ddress);([Uu]ndefined)" OR USE_SANITIZER MATCHES
-                                                                  "([Uu]ndefined);([Aa]ddress)"
-        )
+        if(USE_SANITIZER MATCHES "([Aa]ddress);([Uu]ndefined)" OR USE_SANITIZER MATCHES "([Uu]ndefined);([Aa]ddress)")
             message(STATUS "Building with Address, Undefined sanitizers")
             append("-fsanitize=address,undefined" CMAKE_C_FLAGS CMAKE_CXX_FLAGS)
 
@@ -64,9 +57,7 @@ if(USE_SANITIZER)
                     message(STATUS "Building with Memory sanitizer")
                 endif()
             else()
-                message(
-                    STATUS "Can not use Memory sanitizer with GNU compiler. Use Address instead"
-                )
+                message(STATUS "Can not use Memory sanitizer with GNU compiler. Use Address instead")
             endif()
 
             # UB sanitizer
@@ -94,10 +85,7 @@ if(USE_SANITIZER)
             message(STATUS "Building with Address sanitizer")
             append("-fsanitize=address" CMAKE_C_FLAGS CMAKE_CXX_FLAGS)
         else()
-            message(
-                FATAL_ERROR
-                    "This sanitizer not yet supported in the MSVC environment: ${USE_SANITIZER}"
-            )
+            message(FATAL_ERROR "This sanitizer not yet supported in the MSVC environment: ${USE_SANITIZER}")
         endif()
     else()
         message(FATAL_ERROR "USE_SANITIZER is not supported on this platform.")

@@ -1,6 +1,5 @@
 #
-# Heavily influenced by/Taken from https://github.com/StableCoder/cmake-script Thanks and credits to
-# it!
+# Heavily influenced by/Taken from https://github.com/StableCoder/cmake-script Thanks and credits to it!
 #
 
 find_package(Doxygen)
@@ -8,11 +7,10 @@ find_package(Sphinx)
 
 option(BUILD_DOCUMENTATION "Build API documentation using Doxygen. (make doc)" ${DOXYGEN_FOUND})
 
-# Builds doxygen documentation with a default 'Doxyfile.in' or with a specified one, and can make
-# the results installable (under the `doc` install target)
+# Builds doxygen documentation with a default 'Doxyfile.in' or with a specified one, and can make the results installable (under the `doc`
+# install target)
 #
-# This can only be used once per project, as each target generated is as `doc-${PROJECT_NAME}`
-# unless TARGET_NAME is specified.
+# This can only be used once per project, as each target generated is as `doc-${PROJECT_NAME}` unless TARGET_NAME is specified.
 # ~~~
 # Optional Arguments:
 #
@@ -86,10 +84,7 @@ function(build_docs)
         endif()
 
         if(NOT EXISTS ${DOXYFILE_PATH})
-            message(
-                SEND_ERROR
-                    "Could not find Doxyfile to use for processing documentation at: ${DOXYFILE_PATH}"
-            )
+            message(SEND_ERROR "Could not find Doxyfile to use for processing documentation at: ${DOXYFILE_PATH}")
             return()
         endif()
 
@@ -131,10 +126,7 @@ function(build_docs)
             endif()
 
             if(NOT EXISTS ${SPHINX_PATH})
-                message(
-                    SEND_ERROR
-                        "Could not find config.py to use for processing documentation at: ${SPHINX_PATH}"
-                )
+                message(SEND_ERROR "Could not find config.py to use for processing documentation at: ${SPHINX_PATH}")
                 return()
             endif()
 
@@ -146,8 +138,7 @@ function(build_docs)
             add_custom_target(
                 ${TARGET_NAME}-sphinx
                 COMMAND
-                    ${SPHINX_EXECUTABLE} -b html -Dbreathe_projects.test=${OUT_DIR}/xml # breathe
-                                                                                        # config
+                    ${SPHINX_EXECUTABLE} -b html -Dbreathe_projects.test=${OUT_DIR}/xml # breathe config
                     ${SPHINX_PATH} # input dir for sphinx
                     ${OUT_DIR} # output dir for sphinx
                 WORKING_DIRECTORY ${OUT_DIR}

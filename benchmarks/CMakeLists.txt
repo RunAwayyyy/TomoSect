@@ -26,3 +26,6 @@ target_link_libraries(benchmark_aabb_intersection PUBLIC tomosect celero enoki-c
 
 add_executable(benchmark_ray_gen bench_ray_generation.cpp)
 target_link_libraries(benchmark_ray_gen PUBLIC tomosect celero enoki-cuda)
+
+add_executable(benchmark_curved_rect_intersection bench_curved_rect_intersection.cpp)
+target_link_libraries(benchmark_curved_rect_intersection PUBLIC tomosect celero enoki-cuda)
